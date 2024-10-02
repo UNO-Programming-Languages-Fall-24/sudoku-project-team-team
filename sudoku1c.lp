@@ -11,7 +11,6 @@
 % Generate
 sudoku(A, B, X) :- initial(A, B, X).
 { sudoku(A, B, X) : X = 1..n } = 1 :- A = 1..n, B = 1..n, not initial(A, B, _).
-subgrid(A, B, G) :- A = 1..n, B = 1..n, G = 1 + (((A - 1) / 2) * 2 + (B - 1) / 2).
 
 % Test
 :- sudoku(A, B, X), sudoku(A, C, X), B != C.
@@ -19,6 +18,5 @@ subgrid(A, B, G) :- A = 1..n, B = 1..n, G = 1 + (((A - 1) / 2) * 2 + (B - 1) / 2
 :- sudoku(A, B, X), sudoku(C, B, X), A != C.
     % column uniqueness
 :- sudoku(A, B, X), sudoku(C, D, X), p(A, B) != p(C, D), 1 + (((A - 1) / 2) * 2 + (B - 1) / 2) = 1 + (((C - 1) / 2) * 2 + (D - 1) / 2).
-    % subgrid uniqueness, apparently not needed for question 1a.
+    % subgrid uniqueness
 #show sudoku/3.
-#show subgrid/3.
