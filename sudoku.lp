@@ -4,6 +4,18 @@
 % For subgrid of size n, subgrids can be identified by labels 1..n*n
 % A cell (x,y) can be mapped to the subgrid labeled 1+(((x-1)/n)*n+(y-1)/n)
 
-% Your implementation please...
+% Generate
+size(N) :- N = #max { X : initial(A,B,X); A : initial(A,B,X); B : initial(A,B,X) }.
 
-#show sudoku/3.
+
+% Define
+
+
+% Test
+
+%#show sudoku/3.
+
+
+% Info needed: square/index, vertical/index, horizontal/index
+% square: above
+% 
