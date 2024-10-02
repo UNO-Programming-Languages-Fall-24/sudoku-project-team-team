@@ -1,5 +1,5 @@
-#const n = 2.
-#const nn = 4.
+#const n = 3.
+#const nn = 9.
 
 % Generate
 sudoku(A, B, X) :- initial(A, B, X).
